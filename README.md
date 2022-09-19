@@ -3,8 +3,6 @@
 
 This is a WhatsApp Mockup window that you can use to create fake welcome/notification messages.
 
-If you're seeing this, you've probably already done this step. Congrats!
-
 ## Usage
 There are 2 components `ReceivedMessage` and `SentMessage`
 You can create You message via `<ReceivedMessage text="Hi there" time="3:14 PM" />`
