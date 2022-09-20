@@ -15,7 +15,7 @@
 
 <div in:slide class="h-full w-full bg-accent flex flex-col">
   <div
-    class="w-full bg-primary flex flex-row justify-between items-center pt-6"
+    class="w-full bg-primary flex flex-row justify-between items-center pt-6 overflow-hidden"
   >
     <div class="flex flex-row items-center gap-1 text-base-100 px-2 py-3">
       <a href="/">
@@ -36,26 +36,44 @@
   </div>
 
   <!-- Chat Area -->
-  <div class="flex flex-col gap-0 h-full pt-2">
+  <div
+    class="flex flex-col gap-0 h-full flex-initial pt-2 overflow-y-scroll box-content pr-6 w-full"
+  >
     <ReceivedMessage
-      text="Maybe, just once, someone will call me 'Sir', without adding 'you're making a
-    scene'."
+      text="My favorite quotes of Homer Simpson"
       first={true}
       time="3:14 PM"
     />
+    <ReceivedMessage
+      text="Maybe, just once, someone will call me 'Sir', without adding 'you're making a
+    scene'."
+      time="3:14 PM"
+    />
+    <ReceivedMessage
+      text="Weaseling out of things is important to learn; it’s what separates us from the animals… except the weasel."
+      first={true}
+      time="3:15 PM"
+    />
 
-    <ReceivedMessage text="Woo hoo" time="3:16 PM" />
+    <ReceivedMessage text="Woo hoo!" time="3:16 PM" />
 
-    <div class="h-3" />
+    <div class="p-2" />
 
     <SentMessage
+      text="My favorite quotes of Homer Simpson"
       first={true}
-      text="Trying is the first step towards failure"
       time="3:17 PM"
     />
+    <SentMessage
+      text="Trying is the first step towards failure."
+      time="3:17 PM"
+    />
+
+    <div class="p-2" />
+
+    <ReceivedMessage text="Doh!" first={true} time="3:20 PM" />
   </div>
 
-  <div class="grow" />
   <div class="p-3 flex flex-row gap-1.5">
     <div
       class="h-10 flex-1 flex items-center rounded-full bg-base-100 shadow p-3"
