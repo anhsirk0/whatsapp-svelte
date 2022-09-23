@@ -3,13 +3,6 @@
   import SearchIcon from "../components/SearchIcon.svelte";
   import VerticalDotsIcon from "../components/VerticalDotsIcon.svelte";
   import ChatIcon from "../components/ChatIcon.svelte";
-
-  export let chatList = [
-    {
-      name: "Homer Simpson",
-      imgUrl: "/homer.jpg",
-    },
-  ];
 </script>
 
 <svelte:head>
