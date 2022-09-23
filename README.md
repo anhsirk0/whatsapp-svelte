@@ -4,6 +4,10 @@
 This is a WhatsApp Mockup window that you can use to create fake welcome/notification messages.
 
 ## Usage
+Use Sidebar to update/delete messages/users  
+
+OR  
+
 There are 2 components `ReceivedMessage` and `SentMessage`  
 You can create You message via `<ReceivedMessage text="Hi there" time="3:14 PM" />`  
 Add `first={true}` if it is the first message (it will display a trianglular shape at one corner of the chat bubble)  
