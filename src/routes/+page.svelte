@@ -1,18 +1,13 @@
 <script>
+  import { chatListStore } from "../stores/chatListStore";
   import SearchIcon from "../components/SearchIcon.svelte";
   import VerticalDotsIcon from "../components/VerticalDotsIcon.svelte";
   import ChatIcon from "../components/ChatIcon.svelte";
 
-  let chatList = [
+  export let chatList = [
     {
       name: "Homer Simpson",
       imgUrl: "/homer.jpg",
-      link: "/chat",
-    },
-    {
-      name: "Bart Simpson",
-      imgUrl: "/bart.jpg",
-      link: "/chat",
     },
   ];
 </script>
@@ -44,8 +39,8 @@
   </div>
 
   <div class="flex flex-col divide-y w-full">
-    {#each chatList as chat (chat.name)}
-      <a href={chat.link} class="flex flex-row gap-2 w-full items-center p-3">
+    {#each $chatListStore as chat (chat.name)}
+      <a href="/chat" class="flex flex-row gap-2 w-full items-center p-3">
         <div class="avatar">
           <div class="w-10 rounded-full">
             <img alt={chat.name} src={chat.imgUrl} />

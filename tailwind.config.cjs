@@ -28,7 +28,7 @@ module.exports = {
           "accent-content": colors.slate[800],
           neutral: colors.slate[500],
           "neutral-focus": colors.slate[600],
-          "neutral-content": colors.slate[800],
+          "neutral-content": colors.white,
           "base-100": colors.white,
           "base-200": colors.slate[100],
           "base-300": colors.slate[200],

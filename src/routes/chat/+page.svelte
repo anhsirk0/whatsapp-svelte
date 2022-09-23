@@ -1,5 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
+  import { chatListStore } from "../../stores/chatListStore";
+  import { messageStore } from "../../stores/messageStore";
   import LeftArrowIcon from "../../components/LeftArrowIcon.svelte";
   import VideoCallIcon from "../../components/VideoCallIcon.svelte";
   import PhoneIcon from "../../components/PhoneIcon.svelte";
@@ -10,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Homer Simpson • WhatsApp</title>
+  <title>{$chatListStore[0].name} • WhatsApp</title>
 </svelte:head>
 
 <div in:slide class="h-full w-full bg-accent flex flex-col">
@@ -26,7 +28,7 @@
           <img alt="homer" src="/homer2.jpg" />
         </div>
       </div>
-      <p class="font-bold ml-1 text-sm">Homer Simpson</p>
+      <p class="font-bold ml-1 text-sm">{$chatListStore[0].name}</p>
     </div>
     <div class="flex flex-row items-center gap-2 text-base-100 px-2 py-3">
       <VideoCallIcon />
@@ -37,41 +39,27 @@
 
   <!-- Chat Area -->
   <div
-    class="flex flex-col gap-0 h-full flex-initial pt-2 overflow-y-scroll box-content pr-6 w-full"
+    class="flex flex-col gap-0 h-full flex-initial overflow-y-scroll box-content pr-6 w-full"
   >
-    <ReceivedMessage
-      text="My favorite quotes of Homer Simpson"
-      first={true}
-      time="3:14 PM"
-    />
-    <ReceivedMessage
-      text="Maybe, just once, someone will call me 'Sir', without adding 'you're making a
-    scene'."
-      time="3:14 PM"
-    />
-    <ReceivedMessage
-      text="Weaseling out of things is important to learn; it’s what separates us from the animals… except the weasel."
-      first={true}
-      time="3:15 PM"
-    />
-
-    <ReceivedMessage text="Woo hoo!" time="3:16 PM" />
-
-    <div class="p-2" />
-
-    <SentMessage
-      text="My favorite quotes of Homer Simpson"
-      first={true}
-      time="3:17 PM"
-    />
-    <SentMessage
-      text="Trying is the first step towards failure."
-      time="3:17 PM"
-    />
-
-    <div class="p-2" />
-
-    <ReceivedMessage text="Doh!" first={true} time="3:20 PM" />
+    {#each $messageStore as message, idx (message.text + message.time)}
+      <!-- Add space between received and sent messages -->
+      {#if idx === 0 || message.received !== $messageStore[idx - 1].received}
+        <div class="p-1" />
+      {/if}
+      {#if message.received}
+        <ReceivedMessage
+          text={message.text}
+          first={message.first}
+          time={message.time}
+        />
+      {:else}
+        <SentMessage
+          text={message.text}
+          time={message.time}
+          first={message.first}
+        />
+      {/if}
+    {/each}
   </div>
 
   <div class="p-3 flex flex-row gap-1.5">
