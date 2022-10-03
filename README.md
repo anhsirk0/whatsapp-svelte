@@ -1,9 +1,16 @@
 # whatsapp-svelte
-![svelte.gif](https://github.com/anhsirk0/whatsapp-svelte/blob/master/screenshot/screenshot.gif)
+![main.gif](https://github.com/anhsirk0/whatsapp-svelte/blob/master/screenshot/main.gif)
 
 This is a WhatsApp Mockup window that you can use to create fake welcome/notification messages.
 
 ## Usage
+Adding/Updating users
+![user.gif](https://github.com/anhsirk0/whatsapp-svelte/blob/master/screenshot/user.gif)
+
+Adding/Updating messages
+![msg.gif](https://github.com/anhsirk0/whatsapp-svelte/blob/master/screenshot/msg.gif)
+
+
 Use Sidebar to update/delete messages/users  
 
 OR  
