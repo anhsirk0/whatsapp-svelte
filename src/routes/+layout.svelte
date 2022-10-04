@@ -27,10 +27,10 @@
           </div>
         </div>
       </div>
-      <div class="absolute top-8 right-8">
+      <div class="absolute top-3 md:top-8 right-3 md:right-8">
         <label
           for="settings-drawer"
-          class="btn btn-primary btn-lg btn-circle shadow-lg"
+          class="btn btn-primary md:btn-lg btn-circle shadow-lg"
         >
           <SettingsIcon />
         </label>
