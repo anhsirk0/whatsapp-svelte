@@ -2,6 +2,7 @@
 ![main.gif](https://github.com/anhsirk0/whatsapp-svelte/blob/master/screenshot/main.gif)
 
 This is a WhatsApp Mockup window that you can use to create fake welcome/notification messages.
+[Live version](https://anhsirk0-whatsapp.netlify.com)
 
 ## Usage
 Adding/Updating users  
