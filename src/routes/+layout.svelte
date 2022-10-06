@@ -27,10 +27,10 @@
           </div>
         </div>
       </div>
-      <div class="absolute top-3 md:top-8 right-3 md:right-8">
+      <div class="absolute top-2 md:top-8 right-2 md:right-8">
         <label
           for="settings-drawer"
-          class="btn btn-primary md:btn-lg btn-circle shadow-lg"
+          class="btn btn-primary btn-lg btn-circle shadow-lg"
         >
           <SettingsIcon />
         </label>
@@ -39,7 +39,9 @@
   </div>
   <div class="drawer-side">
     <label for="settings-drawer" class="drawer-overlay" />
-    <div class="menu p-4 overflow-y-auto w-80 lg:w-96 bg-base-100 space-y-4">
+    <div
+      class="p-4 overflow-y-auto w-[75vw] md:w-80 lg:w-96 bg-base-100 space-y-4"
+    >
       <!-- Sidebar content here -->
       <div
         tabindex="0"
