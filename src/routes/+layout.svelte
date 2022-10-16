@@ -40,7 +40,7 @@
   <div class="drawer-side">
     <label for="settings-drawer" class="drawer-overlay" />
     <div
-      class="p-4 overflow-y-auto w-[75vw] md:w-80 lg:w-96 bg-base-100 space-y-4"
+      class="p-4 overflow-y-auto w-[75vw] md:w-80 lg:w-96 bg-base-100 flex flex-col gap-4"
     >
       <!-- Sidebar content here -->
       <div
@@ -71,6 +71,28 @@
             {/each}
           </div>
           <AddMessage />
+        </div>
+      </div>
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box shadow"
+      >
+        <input type="checkbox" class="peer" />
+        <div class="collapse-title text-xl font-medium">About</div>
+        <div class="collapse-content">
+          <div class="flex flex-col gap-4">
+            <p>
+              This is a WhatsApp Mockup window that you can use to create fake
+              welcome/notification messages.
+            </p>
+            <a
+              class="btn btn-block"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/anhsirk0/whatsapp-svelte"
+              >View Source Code</a
+            >
+          </div>
         </div>
       </div>
     </div>
