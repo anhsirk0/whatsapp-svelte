@@ -7,6 +7,7 @@
   import PhoneIcon from "../../components/PhoneIcon.svelte";
   import VerticalDotsIcon from "../../components/VerticalDotsIcon.svelte";
   import MicIcon from "../../components/MicIcon.svelte";
+  import CheckBadgeIcon from "../../components/CheckBadgeIcon.svelte";
   import ReceivedMessage from "../../components/RecievedMessage.svelte";
   import SentMessage from "../../components/SentMessage.svelte";
 </script>
@@ -28,7 +29,12 @@
           <img alt="homer" src="/homer2.jpg" />
         </div>
       </div>
-      <p class="font-bold ml-1 text-sm">{$chatListStore[0].name}</p>
+      <div class="flex items-center gap-1">
+        <p class="font-bold ml-1 text-sm">{$chatListStore[0].name}</p>
+        {#if $chatListStore[0].verified}
+          <CheckBadgeIcon />
+        {/if}
+      </div>
     </div>
     <div class="flex flex-row items-center gap-2 text-base-100 px-2 py-3">
       <VideoCallIcon />

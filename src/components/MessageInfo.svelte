@@ -42,6 +42,7 @@
           <TrashIcon />
         </button>
       </div>
+      <div class="divider my-0" />
     </div>
   {:else}
     <p class="text-lg">

@@ -40,7 +40,7 @@
   <div class="drawer-side">
     <label for="settings-drawer" class="drawer-overlay" />
     <div
-      class="p-4 overflow-y-auto w-[75vw] md:w-80 lg:w-96 bg-base-100 flex flex-col gap-4"
+      class="p-4 overflow-y-auto w-[75vw] md:w-80 lg:w-96 bg-base-100 space-y-4"
     >
       <!-- Sidebar content here -->
       <div

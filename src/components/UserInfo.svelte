@@ -7,6 +7,7 @@
   let isEditing = false;
   let newName = $chatListStore[idx].name;
   let newImgUrl = $chatListStore[idx].imgUrl;
+  let newVerified = $chatListStore[idx].verified;
 
   const toggleEdit = () => {
     isEditing = !isEditing;
@@ -15,6 +16,7 @@
   const saveChanges = () => {
     $chatListStore[idx].name = newName;
     $chatListStore[idx].imgUrl = newImgUrl;
+    $chatListStore[idx].verified = newVerified;
     isEditing = false;
   };
 </script>
@@ -38,6 +40,16 @@
           bind:value={newImgUrl}
         />
       </div>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Verified</span>
+          <input
+            type="checkbox"
+            bind:checked={newVerified}
+            class="checkbox checkbox-primary"
+          />
+        </label>
+      </div>
       <div class="flex gap-4 w-full mt-2">
         <button on:click={saveChanges} class="btn btn-sm btn-primary flex-1">
           Save
@@ -54,6 +66,7 @@
           <TrashIcon />
         </button>
       </div>
+      <div class="divider my-0" />
     </div>
   {:else}
     <p class="text-lg">
